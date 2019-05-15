@@ -1,0 +1,24 @@
+<div
+  *ngIf="movies.length > 0"
+  id="carouselCaptions"
+  class="carousel slide carousel-fade"
+  data-ride="carousel"
+>
+  <div class="carousel-inner">
+    <div
+      *ngFor="let dummy of ' '.repeat(carouselNumber).split(''); let x = index"
+      class="carousel-item top10"
+      [ngClass]="x === 0 ? 'item active' : 'item'"
+    >
+      <img
+        class="d-block img-fluid pointer"
+        [src]="movies[x] | backdropPipe"
+        [alt]="movies[x].original_title"
+        [routerLink]="['/movie', movies[x].id]"
+      />
+      <div class="carousel-caption d-none d-md-block">
+        <h3 class="carousel-title bg-dark">{{ movies[x].original_title }}</h3>
+      </div>
+    </div>
+  </div>
+</div>

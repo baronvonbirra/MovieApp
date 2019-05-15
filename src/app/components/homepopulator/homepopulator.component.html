@@ -1,0 +1,65 @@
+<div class="container">
+  <br />
+  <h1 class="titles">Movies in theaters now</h1>
+  <hr />
+  <div class="container">
+    <div *ngIf="theaterMovies.length > 0" class="card-columns">
+      <div
+        *ngFor="let dummy of ' '.repeat(itemNumber).split(''); let x = index"
+        class="card pointer"
+        [routerLink]="['/movie', theaterMovies[x].id]"
+      >
+        <img
+          [src]="theaterMovies[x] | imagePipe"
+          class="card-img-top img-rounded"
+          [alt]="theaterMovies[x].original_title"
+        />
+        <div class="image-caption bg-dark centered card-body">
+          {{ theaterMovies[x].original_title }}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <br />
+  <h1 class="titles">Popular movies</h1>
+  <hr />
+  <div *ngIf="popularMovies.length > 0" class="card-group">
+    <div
+      *ngFor="let dummy of ' '.repeat(itemNumber).split(''); let x = index"
+      class="card bg-dark pointer"
+      [routerLink]="['/movie', popularMovies[x].id]"
+    >
+      <img
+        [src]="popularMovies[x] | imagePipe"
+        class="card-img-top img-rounded bg-dark"
+        [alt]="popularMovies[x].original_title"
+      />
+      <div class="bg-dark">
+        <div class="image-caption bg-dark centered">
+          {{ popularMovies[x].original_title }}
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <br />
+  <h1 class="titles">Highest rated R movies</h1>
+  <hr />
+  <div *ngIf="RMovies.length > 0" class="card-columns">
+    <div
+      *ngFor="let dummy of ' '.repeat(itemNumber).split(''); let x = index"
+      class="card pointer"
+      [routerLink]="['/movie', RMovies[x].id]"
+    >
+      <img
+        [src]="RMovies[x] | imagePipe"
+        class="card-img-top img-rounded img-fluid"
+        [alt]="RMovies[x].original_title"
+      />
+      <div class="image-caption bg-dark centered card-body">
+        {{ RMovies[x].original_title }}
+      </div>
+    </div>
+  </div>
+</div>

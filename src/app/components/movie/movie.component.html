@@ -1,0 +1,100 @@
+<h1 class="text-capitalize movie-title col-sm main-container">{{ movie.original_title }}</h1>
+<div class="container animated fadeIn">
+  <div class="row main-container">
+    <div class="col-md-4">
+      <img
+        [src]="movie | imagePipe"
+        class="img-thumbnail rounded mx-auto d-block"
+      />
+    </div>
+    <div class="col-md-8">
+      <div class="container">
+        <div class="row">
+          <h1 class="text-capitalize align-text-bottom title col-sm">
+            Overview
+          </h1>
+          <a
+            role="button"
+            href="{{ movie.homepage }}"
+            target="_blank"
+            class="btn btn-default col-m mr-1 align-top"
+          >
+            <img src="../../../assets/img/websiteicon.png" width="50" />
+          </a>
+          <a
+            role="button"
+            href="https://www.imdb.com/title/{{ movie.imdb_id }}"
+            target="_blank"
+            class="btn btn-default col-m mr-1 align-top"
+          >
+            <img src="../../../assets/img/imdblogo.png" width="50" />
+          </a>
+          <a
+            onclick="history.go(-1)"
+            role="button"
+            class="btn btn-default col-m mr-1 pointer align-top"
+          >
+            <img src="../../../assets/img/backbutton.png" width="50" />
+          </a>
+        </div>
+      </div>
+      <hr />
+      <br />
+      <div class="container">
+        <div class="row">
+          <div class="col genres">
+            <button
+              *ngFor="let genre of movie.genres"
+              type="button"
+              class="btn btn-secondary no-pointer"
+            >
+              {{ genre.name }}
+            </button>
+          </div>
+          <div class="col">
+            <p class="runtime overview">{{ movie.runtime }} minutes</p>
+          </div>
+        </div>
+      </div>
+      <br />
+      <div class="container">
+        <div class="row">
+          <h6 class="overview">{{ movie.overview }}</h6>
+        </div>
+        <div class="row">
+          <div *ngIf="movie.tagline != ''" class="col">
+            <h6 class="overview tagline">- {{ movie.tagline }}</h6>
+          </div>
+        </div>
+      </div>
+      <br />
+      <div class="container overview">
+        <div class="row">
+          <div class="col-6 text-center">
+            <h4 class="subtitle">Info</h4>
+            <div class="row">
+              <div class="col">Release date:</div>
+              <div class="col">{{ movie.release_date | date : 'd-MM-yyyy' }}</div>
+            </div>
+            <div class="row">
+                <div class="col">Revenue:</div>
+                <div class="col">{{ movie.revenue | currency : 'USD':'symbol':'4.0-0' }}</div>
+              </div>
+          </div>
+          <div class="col text-center">
+            <h4 class="subtitle">Score</h4>
+            <button type="button" class="btn btn-primary no-pointer">
+              {{ movie.vote_average }}
+            </button>
+          </div>
+          <div class="col text-center">
+            <h4 class="subtitle">Popularity</h4>
+            <button type="button" class="btn btn-info no-pointer">
+              {{ movie.popularity }}
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

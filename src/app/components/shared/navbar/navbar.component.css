@@ -1,0 +1,15 @@
+.navbar {
+  color: white;
+}
+
+.nav-title {
+  font-family: 'Modak', cursive;
+  font-size: 25px;
+  color: white;
+  text-decoration: none !important;
+}
+
+.nav-link,
+.form-inline {
+  font-family: 'Roboto Mono', monospace;
+}
