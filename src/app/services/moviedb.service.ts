@@ -5,7 +5,7 @@ import { map } from 'rxjs/operators';
 @Injectable()
 export class MoviedbService {
   private token = '44f63178760c028c7269aab4ef019b6f';
-  private urlMoviedb = 'https://api.themoviedb.org/3/';
+  private urlMoviedb = '//api.themoviedb.org/3/';
 
   constructor(private http: HttpClient) {}
 
