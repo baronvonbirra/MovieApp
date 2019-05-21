@@ -1,4 +1,4 @@
-* Fix image loading
+* Fix Refresh issue
 * Improve URL
 * Fix "Mixed Content" message
 * Add In Cinemas Tab, with options
