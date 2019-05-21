@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "movieapp": {
+    "MovieApp": {
       "root": "src",
       "sourceRoot": "src",
       "projectType": "application",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/movieapp",
+            "outputPath": "dist/MovieApp",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -59,18 +59,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "movieapp:build"
+            "browserTarget": "MovieApp:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "movieapp:build:production"
+              "browserTarget": "MovieApp:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "movieapp:build"
+            "browserTarget": "MovieApp:build"
           }
         },
         "test": {
@@ -104,7 +104,7 @@
         }
       }
     },
-    "movieapp-e2e": {
+    "MovieApp-e2e": {
       "root": "e2e/",
       "projectType": "application",
       "prefix": "",
@@ -113,11 +113,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "movieapp:serve"
+            "devServerTarget": "MovieApp:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "movieapp:serve:production"
+              "devServerTarget": "MovieApp:serve:production"
             }
           }
         },
@@ -133,5 +133,5 @@
       }
     }
   },
-  "defaultProject": "movieapp"
+  "defaultProject": "MovieApp"
 }
