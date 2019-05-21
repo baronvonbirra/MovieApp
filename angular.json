@@ -4,7 +4,7 @@
   "newProjectRoot": "projects",
   "projects": {
     "movieapp": {
-      "root": "",
+      "root": "src",
       "sourceRoot": "src",
       "projectType": "application",
       "prefix": "app",
@@ -19,9 +19,9 @@
             "polyfills": "src/polyfills.ts",
             "tsConfig": "src/tsconfig.app.json",
             "assets": [
-              "favicon.ico",
-              "assets",
-              "404.html"
+              "src/favicon.ico",
+              "src/assets",
+              "src/404.html"
             ],
             "styles": [
               "src/styles.css"
