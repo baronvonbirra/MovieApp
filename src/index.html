@@ -5,6 +5,17 @@
     <title>MovieApp</title>
     <base href="/" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <!-- Github Pages hack to allow SPA refresh without receiving 404. -->
+        <script>
+          (function() {
+            var redirect = sessionStorage.redirect;
+            delete sessionStorage.redirect;
+            if (redirect && redirect != location.href) {
+              history.replaceState(null, null, redirect);
+            }
+          })();
+        </script>
+        <!-- /Github Pages hack. -->
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -38,16 +49,5 @@
       integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
       crossorigin="anonymous"
     ></script>
-    <!-- Github Pages hack to allow SPA refresh without receiving 404. -->
-    <script>
-      (function() {
-        var redirect = sessionStorage.redirect;
-        delete sessionStorage.redirect;
-        if (redirect && redirect != location.href) {
-          history.replaceState(null, null, redirect);
-        }
-      })();
-    </script>
-    <!-- /Github Pages hack. -->
   </body>
 </html>
