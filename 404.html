@@ -5,49 +5,49 @@
     <title>MovieApp</title>
     <base href="MovieApp">
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <!-- Github Pages hack to allow SPA refresh without receiving 404. -->
+        <script>
+          (function() {
+            var redirect = sessionStorage.redirect;
+            delete sessionStorage.redirect;
+            if (redirect && redirect != location.href) {
+              history.replaceState(null, null, redirect);
+            }
+          })();
+        </script>
+        <!-- /Github Pages hack. -->
     <link
       rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      href="//stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
     <link rel="icon" type="image/x-icon" href="./assets/img/movie.ico" />
     <link
-      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      href="//fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
     />
     <link
-      href="https://fonts.googleapis.com/css?family=Modak|Roboto+Mono|Baloo+Bhai|Montserrat"
+      href="//fonts.googleapis.com/css?family=Modak|Roboto+Mono|Baloo+Bhai|Montserrat"
       rel="stylesheet"
     />
   <link rel="stylesheet" href="styles.f75bbef4e88b9f8dd98d.css"></head>
   <body>
     <app-root></app-root>
     <script
-      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      src="//code.jquery.com/jquery-3.3.1.slim.min.js"
       integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
       crossorigin="anonymous"
     ></script>
     <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+      src="//cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
       integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
       crossorigin="anonymous"
     ></script>
     <script
-      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      src="//stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
       integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
       crossorigin="anonymous"
     ></script>
-    <!-- Github Pages hack to allow SPA refresh without receiving 404. -->
-    <script>
-      (function() {
-        var redirect = sessionStorage.redirect;
-        delete sessionStorage.redirect;
-        if (redirect && redirect != location.href) {
-          history.replaceState(null, null, redirect);
-        }
-      })();
-    </script>
-    <!-- /Github Pages hack. -->
-  <script type="text/javascript" src="runtime.26209474bfa8dc87a77c.js"></script><script type="text/javascript" src="es2015-polyfills.3087e922b8277efa95f7.js" nomodule></script><script type="text/javascript" src="polyfills.51d045c4985ac9f209d9.js"></script><script type="text/javascript" src="main.5e606c02567ba2c510d9.js"></script></body>
+  <script type="text/javascript" src="runtime.26209474bfa8dc87a77c.js"></script><script type="text/javascript" src="es2015-polyfills.3087e922b8277efa95f7.js" nomodule></script><script type="text/javascript" src="polyfills.51d045c4985ac9f209d9.js"></script><script type="text/javascript" src="main.6116446beee86f63f09c.js"></script></body>
 </html>
