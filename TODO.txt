@@ -1,6 +1,3 @@
 * Improve URL
-* Fix "Mixed Content" message
-* Add In Cinemas Tab, with options
-* Add Recommendations Tab
 * Improved Search
 * Able to search by tag from Movie page
