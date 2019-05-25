@@ -1,3 +1,5 @@
 * Improve URL
 * Improved Search
 * Able to search by tag from Movie page
+* Update Carousel to Angular Bootstrap
+* Improve Ratings in movie page
