@@ -4,6 +4,7 @@ import { HttpClientModule, HttpClientJsonpModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app.routes';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 import { AppComponent } from './app.component';
 import { HomeComponent } from './components/home/home.component';
@@ -16,6 +17,8 @@ import { HomepopulatorComponent } from './components/homepopulator/homepopulator
 import { MoviedbService } from './services/moviedb.service';
 import { BackdropPipe } from './pipes/backdrop-pipe.pipe';
 import { ImagePipe } from './pipes/image-pipe.pipe';
+import { IntheatersComponent } from './components/intheaters/intheaters.component';
+import { RecommendationsComponent } from './components/recommendations/recommendations.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +30,9 @@ import { ImagePipe } from './pipes/image-pipe.pipe';
     MovieComponent,
     ImagePipe,
     HomepopulatorComponent,
-    BackdropPipe
+    BackdropPipe,
+    IntheatersComponent,
+    RecommendationsComponent
   ],
   imports: [
     FormsModule,
@@ -35,7 +40,8 @@ import { ImagePipe } from './pipes/image-pipe.pipe';
     BrowserModule,
     HttpClientModule,
     HttpClientJsonpModule,
-    AppRoutingModule
+    AppRoutingModule,
+    NgbModule
   ],
   providers: [MoviedbService],
   bootstrap: [AppComponent]

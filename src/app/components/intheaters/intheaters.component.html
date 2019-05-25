@@ -1,0 +1,32 @@
+<h1 class="text-capitalize title col-sm main-container">In theaters now</h1>
+
+<div *ngIf="theaterMovies.length > 0" class="container">
+  <div class="card-columns justify-content-center">
+    <div
+      *ngFor="let movie of theaterMovies"
+      class="card pointer"
+      [routerLink]="['/movie', movie.id]"
+    >
+      <img
+        [src]="movie | imagePipe"
+        class="card-img-top img-rounded"
+        [alt]="movie.original_title"
+      />
+      <div class="image-caption bg-dark centered card-body">
+        {{ movie.original_title }}
+      </div>
+    </div>
+  </div>
+</div>
+
+<ngb-pagination
+  size="lg"
+  class="d-flex justify-content-center"
+  (pageChange)="moviesInTheater($event)"
+  [pageSize]="pageSize"
+  [(page)]="page"
+  [maxSize]="5"
+  [rotate]="true"
+  [collectionSize]="totalItems"
+  [boundaryLinks]="true"
+></ngb-pagination>

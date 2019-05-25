@@ -2,18 +2,29 @@
   <div class="row">
     <div class="col-auto mr-autocol"></div>
     <div class="search-col col-md-2">
-      <label for="search">Search movies:</label>
+      <ng-template #rt let-r="result" let-t="term">
+        <ngb-highlight
+          [result]="r.name"
+          [term]="t"
+          (click)="populateMovies()"
+        ></ngb-highlight>
+      </ng-template>
+
+      <label for="typeahead-template">Search recommendations:</label>
       <input
-        [(ngModel)]="search"
-        name="search"
+        id="typeahead-template"
         type="text"
-        placeholder="Search a movie..."
         class="form-control"
-        (keyup.enter)="searchMovie()"
+        [(ngModel)]="model"
+        [ngbTypeahead]="search"
+        [resultTemplate]="rt"
+        [inputFormatter]="formatter"
+        placeholder="Search by genre..."
+        (keyup.enter)="populateMovies()"
       />
     </div>
     <div *ngIf="movies.length > 0" class="col-md-9 main-container">
-      <h1 class="title text-capitalize">{{ search }}</h1>
+      <h1 class="title text-capitalize">{{ model.name }}</h1>
       <hr />
       <div class="container">
         <div class="row">

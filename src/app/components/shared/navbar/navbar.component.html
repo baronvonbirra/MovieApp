@@ -26,24 +26,32 @@
         <a class="nav-link" [routerLink]="['home']">Home</a>
       </li>
       <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" [routerLink]="['intheaters']">In theaters</a>
+      </li>
+      <li class="nav-item" routerLinkActive="active">
+        <a class="nav-link" [routerLink]="['recommendations']"
+          >Recommendations</a
+        >
+      </li>
+      <li class="nav-item" routerLinkActive="active">
         <a class="nav-link" [routerLink]="['search']">Search</a>
       </li>
     </ul>
     <form class="form-inline my-2 my-lg-0">
-        <input
-          #searchText
-          (keydown.enter)="searchMovie(searchText.value)"
-          class="form-control mr-sm-2"
-          type="text"
-          placeholder="Search movie"
-        />
-        <button
-          (click)="searchMovie(searchText.value)"
-          class="btn btn-outline-success my-2 my-sm-0"
-          type="button"
-        >
-          Search
-        </button>
-      </form>
+      <input
+        #searchText
+        (keydown.enter)="searchMovie(searchText.value)"
+        class="form-control mr-sm-2"
+        type="text"
+        placeholder="Search movie"
+      />
+      <button
+        (click)="searchMovie(searchText.value)"
+        class="btn btn-outline-success my-2 my-sm-0"
+        type="button"
+      >
+        Search
+      </button>
+    </form>
   </div>
 </nav>

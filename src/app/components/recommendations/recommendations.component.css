@@ -1,0 +1,18 @@
+.image-caption {
+  font-family: 'Baloo Bhai', cursive;
+  text-align: center;
+}
+
+.title {
+  font-family: 'Baloo Bhai', cursive;
+  padding-left: 10%;
+}
+
+.search-col {
+  font-family: 'Roboto Mono', monospace;
+  padding-top: 10px;
+}
+
+.movies {
+  margin-bottom: 10px;
+}

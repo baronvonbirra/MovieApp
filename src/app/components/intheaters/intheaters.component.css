@@ -1,0 +1,30 @@
+.title {
+  font-family: 'Baloo Bhai', cursive;
+  text-align: center;
+  font-size: 70px;
+}
+
+.image-caption {
+  font-family: 'Baloo Bhai', cursive;
+  text-align: center;
+}
+
+.movies {
+  margin-bottom: 10px;
+}
+
+ngb-pagination ::ng-deep ul {
+  font-family: 'Baloo Bhai', cursive;
+}
+
+ngb-pagination ::ng-deep ul > li:not(.active) > a {
+  background-color: #1f1f1f !important;
+  color: aliceblue;
+}
+
+ngb-pagination ::ng-deep ul > li.active > a {
+  background-color: #f90 !important;
+  color: black !important;
+  border: none !important;
+  outline: none !important;
+}

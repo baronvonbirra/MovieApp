@@ -1,4 +1,6 @@
-<h1 class="text-capitalize movie-title col-sm main-container">{{ movie.original_title }}</h1>
+<h1 class="text-capitalize movie-title col-sm main-container">
+  {{ movie.original_title }}
+</h1>
 <div class="container animated fadeIn">
   <div class="row main-container">
     <div class="col-md-4">
@@ -19,7 +21,11 @@
             target="_blank"
             class="btn btn-default col-m mr-1 align-top"
           >
-            <img src="./assets/img/websiteicon.png" alt="Movie homepage" width="50" />
+            <img
+              src="./assets/img/websiteicon.png"
+              alt="Movie homepage"
+              width="50"
+            />
           </a>
           <a
             role="button"
@@ -74,12 +80,22 @@
             <h4 class="subtitle">Info</h4>
             <div class="row">
               <div class="col">Release date:</div>
-              <div class="col">{{ movie.release_date | date : 'd-MM-yyyy' }}</div>
+              <div class="col">
+                {{ movie?.release_date | date: 'd-MM-yyyy' }}
+              </div>
             </div>
             <div class="row">
-                <div class="col">Revenue:</div>
-                <div class="col">{{ movie.revenue | currency : 'USD':'symbol':'4.0-0' }}</div>
+              <div class="col">Budget:</div>
+              <div class="col">
+                {{ movie?.budget | currency: 'USD':'symbol':'4.0-0' }}
               </div>
+            </div>
+            <div class="row">
+              <div class="col">Revenue:</div>
+              <div class="col">
+                {{ movie?.revenue | currency: 'USD':'symbol':'4.0-0' }}
+              </div>
+            </div>
           </div>
           <div class="col text-center">
             <h4 class="subtitle">Score</h4>

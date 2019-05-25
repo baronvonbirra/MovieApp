@@ -15,7 +15,7 @@ export class HomepopulatorComponent implements OnInit {
   constructor(public MOVIEDB: MoviedbService) {}
 
   populateTheater() {
-    this.MOVIEDB.getTheatherMovies().subscribe(resp => {
+    this.MOVIEDB.gettheaterMovies().subscribe(resp => {
       const results = 'results';
       this.theaterMovies = resp[results];
     });
