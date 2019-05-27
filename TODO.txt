@@ -4,3 +4,4 @@
 * Update Carousel to Angular Bootstrap
 * Improve Ratings in movie page
 * Add footer
+* Add sticky navbar
