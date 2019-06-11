@@ -1,3 +1,8 @@
+html,
+body {
+  height: 100%;
+}
+
 body {
   background-color: black;
   color: white !important;
@@ -16,11 +21,19 @@ hr {
 }
 
 .no-pointer {
-  cursor: context-menu! important;
+  cursor: context-menu !important;
 }
 
 .main-container {
-  margin-top: 30px;
+  margin-top: 65px;
+}
+
+.full-body {
+  min-height: 100vh;
+}
+
+.out-margin {
+  margin-right: 30px;
 }
 
 /* Animations */

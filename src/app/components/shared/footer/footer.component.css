@@ -1,0 +1,22 @@
+.navbar {
+  width: 100%;
+  display: flex;
+}
+
+.nav-item {
+  font-family: 'Roboto Mono', monospace;
+  font-size: 11px;
+  padding-right: 20px;
+}
+
+li {
+  float: none;
+  display: inline-block;
+  *display: inline; /* ie7 fix */
+  *zoom: 1; /* hasLayout ie7 trigger */
+  vertical-align: top;
+}
+
+.spacer {
+  flex: 1;
+}

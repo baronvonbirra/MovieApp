@@ -10,6 +10,7 @@ import { map } from 'rxjs/operators';
 })
 export class MovieComponent implements OnInit {
   movie: any = {};
+  movieAverage: number;
 
   constructor(
     private activatedRoute: ActivatedRoute,
@@ -22,7 +23,9 @@ export class MovieComponent implements OnInit {
       .subscribe(id => {
         this.MOVIEDB.getMovieDetails(id).subscribe(resp => {
           this.movie = resp;
+          this.movieAverage = (resp['vote_average']) / 2;
         });
+        window.scrollTo(0, 0);
       });
   }
 }

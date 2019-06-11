@@ -1,4 +1,4 @@
-<div class="top30">
+<div class="main-container out-margin full-body">
   <div class="row">
     <div class="col-auto mr-autocol"></div>
     <div class="search-col col-md-2">
@@ -23,10 +23,10 @@
         (keyup.enter)="populateMovies()"
       />
     </div>
-    <div *ngIf="movies.length > 0" class="col-md-9 main-container">
+    <div *ngIf="movies.length > 0" class="col-md-9 top10 animated fadeIn">
       <h1 class="title text-capitalize">{{ model.name }}</h1>
       <hr />
-      <div class="container">
+      <div class="container animated fadeIn">
         <div class="row">
           <div
             *ngFor="let movie of movies"

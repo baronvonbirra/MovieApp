@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { MoviedbService } from '../../services/moviedb.service';
 import { ActivatedRoute } from '@angular/router';
 
@@ -7,7 +7,7 @@ import { ActivatedRoute } from '@angular/router';
   templateUrl: './search.component.html',
   styleUrls: ['./search.component.css']
 })
-export class SearchComponent {
+export class SearchComponent implements OnInit {
   search = '';
   movies: any = {};
   constructor(public MOVIEDB: MoviedbService, public router: ActivatedRoute) {
@@ -28,5 +28,8 @@ export class SearchComponent {
       const results = 'results';
       this.movies = resp[results];
     });
+  }
+  ngOnInit() {
+    window.scrollTo(0, 0);
   }
 }

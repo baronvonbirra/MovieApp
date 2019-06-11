@@ -5,24 +5,28 @@
     <title>MovieApp</title>
     <base href="/" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <!-- Github Pages hack to allow SPA refresh without receiving 404. -->
-        <script>
-          (function() {
-            var redirect = sessionStorage.redirect;
-            delete sessionStorage.redirect;
-            if (redirect && redirect != location.href) {
-              history.replaceState(null, null, redirect);
-            }
-          })();
-        </script>
-        <!-- /Github Pages hack. -->
+    <!-- Github Pages hack to allow SPA refresh without receiving 404. -->
+    <script>
+      (function() {
+        var redirect = sessionStorage.redirect;
+        delete sessionStorage.redirect;
+        if (redirect && redirect != location.href) {
+          history.replaceState(null, null, redirect);
+        }
+      })();
+    </script>
+    <!-- /Github Pages hack. -->
     <link
       rel="stylesheet"
       href="//stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
       integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
       crossorigin="anonymous"
     />
-    <link rel="icon" type="image/x-icon" href="./assets/img/movie.ico" />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="https://img.icons8.com/color/30/000000/hollywood-stars.png"
+    />
     <link
       href="//fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"

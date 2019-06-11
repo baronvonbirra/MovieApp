@@ -8,7 +8,7 @@ import { MoviedbService } from '../../services/moviedb.service';
 })
 export class CarouselComponent implements OnInit {
   movies: any = {};
-  carouselNumber = 3;
+  carouselNumber = 4;
 
   constructor(public MOVIEDB: MoviedbService) {}
 

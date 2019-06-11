@@ -19,6 +19,7 @@ import { BackdropPipe } from './pipes/backdrop-pipe.pipe';
 import { ImagePipe } from './pipes/image-pipe.pipe';
 import { IntheatersComponent } from './components/intheaters/intheaters.component';
 import { RecommendationsComponent } from './components/recommendations/recommendations.component';
+import { FooterComponent } from './components/shared/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { RecommendationsComponent } from './components/recommendations/recommend
     HomepopulatorComponent,
     BackdropPipe,
     IntheatersComponent,
-    RecommendationsComponent
+    RecommendationsComponent,
+    FooterComponent
   ],
   imports: [
     FormsModule,
