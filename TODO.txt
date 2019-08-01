@@ -1,2 +1,4 @@
 * Improved Search
 * Able to search by tag from Movie page
+* Add tests
+* Fix issue here: https://github.com/baronvonbirra/MovieApp/blob/917c74ff005ea1f163e06195632a35cf7aa21863/src/app/services/moviedb.service.ts#L28
