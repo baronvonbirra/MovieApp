@@ -8,6 +8,8 @@
     "test": "ng test",
     "lint": "ng lint",
     "cypress:open": "cypress open",
+    "cypress": "cypress verify && cypress version && cypress run",
+    "cypress:updatesnapshot": "cypress run --env updateSnapshots=true",
     "e2e": "ng e2e"
   },
   "private": true,
