@@ -10,33 +10,48 @@ describe('Home Page works', function() {
   });
   it('loads panels with content', function() {
     cy.get(`[data-test="movies-panel"]`)
-    .contains('Movies in theaters now')
-    .should('exist');
+      .contains('Movies in theaters now')
+      .should('exist');
     cy.get(`[data-test="movies-panel"]`)
-    .find('.card-img-top')
-    .should('exist');
+      .find('.card-img-top')
+      .should('exist');
   });
   it('links to movie page when clicking on a movie', function() {
     cy.get(`[data-test="movies-panel"]`)
-    .find('.card-img-top')
-    .first()
-    .click();
+      .find('.card-img-top')
+      .first()
+      .click();
     cy.location().should(loc => {
       expect(loc.pathname).to.include('/movie/');
-    })
+    });
   });
 });
 
-/* describe('Movie Page works', function() {
+describe('Movie Page works', function() {
   it('successfully loads', function() {
-    cy.visit('http://localhost:4200');
+    cy.visit('http://localhost:4200')
+      .get('.carousel-item.active')
+      .click();
   });
-  it('displays properly', function() {});
-  it('shows all elements', function() {});
-  it('can go to previous page', function() {});
+  it('displays properly', function() {
+    cy.wait(1000).matchImageSnapshot('movie-page');
+  });
+  it('shows all elements', function() {
+    cy.get('.img-thumbnail').should('exist');
+    cy.get('.movie-title').should('exist');
+    cy.get('.genres').should('exist');
+    cy.get(`[data-test="score-system"]`).should('exist');
+    cy.get(`[data-test="popularity-system"]`).should('exist');
+  });
+  it('can go to previous page', function() {
+    cy.get('.back').click();
+    cy.location().should(loc => {
+      expect(loc.pathname).to.include('/home');
+    });
+  });
 });
 
-describe('In Theaters Page works', function() {
+/* describe('In Theaters Page works', function() {
   it('successfully loads', function() {
     cy.visit('http://localhost:4200');
   });

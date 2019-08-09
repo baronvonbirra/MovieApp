@@ -3,7 +3,7 @@
     <br />
     <h1 class="titles">Movies in theaters now</h1>
     <hr />
-    <div class="container">
+    <div class="container ignore-snapshot">
       <div *ngIf="theaterMovies.length > 0" class="card-columns">
         <div
           *ngFor="let dummy of ' '.repeat(itemNumber).split(''); let x = index"
@@ -26,7 +26,7 @@
     <br />
     <h1 class="titles">Popular movies</h1>
     <hr />
-    <div *ngIf="popularMovies.length > 0" class="card-group">
+    <div *ngIf="popularMovies.length > 0" class="card-group ignore-snapshot">
       <div
         *ngFor="let dummy of ' '.repeat(itemNumber).split(''); let x = index"
         class="card bg-dark pointer"
@@ -49,7 +49,7 @@
     <br />
     <h1 class="titles">Highest rated R movies</h1>
     <hr />
-    <div *ngIf="RMovies.length > 0" class="card-columns">
+    <div *ngIf="RMovies.length > 0" class="card-columns ignore-snapshot">
       <div
         *ngFor="let dummy of ' '.repeat(itemNumber).split(''); let x = index"
         class="card pointer"

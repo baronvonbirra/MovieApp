@@ -1,3 +1,6 @@
 {
-  "projectId": "y3esc5"
+  "projectId": "y3esc5",
+  "viewportWidth": 1280,
+  "viewportHeight": 720,
+  "videoUploadOnPasses": false
 }
