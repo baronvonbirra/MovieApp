@@ -1,7 +1,7 @@
 <div class="main-container out-margin full-body">
   <div class="row">
     <div class="col-auto mr-autocol"></div>
-    <div class="search-col col-md-2">
+    <div class="search-col col-md-2" data-test="recommendations-search">
       <ng-template #rt let-r="result" let-t="term">
         <ngb-highlight
           [result]="r.name"
@@ -27,7 +27,7 @@
       <h1 class="title text-capitalize">{{ model.name }}</h1>
       <hr />
       <div class="container animated fadeIn">
-        <div class="row">
+        <div class="row" data-test="movies-container">
           <div
             *ngFor="let movie of movies"
             class="col-md-3 text-center pointer movies"

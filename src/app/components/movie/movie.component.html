@@ -59,7 +59,9 @@
               </button>
             </div>
             <div class="col">
-              <p class="runtime overview ignore-snapshot">{{ movie.runtime }} minutes</p>
+              <p class="runtime overview ignore-snapshot">
+                {{ movie.runtime }} minutes
+              </p>
             </div>
           </div>
         </div>
@@ -101,7 +103,11 @@
             <div class="col text-center">
               <h4 class="subtitle">Score</h4>
               <ng-template #t let-fill="fill">
-                <span class="star ignore-snapshot" [class.full]="fill === 100" data-test="score-system">
+                <span
+                  class="star ignore-snapshot"
+                  [class.full]="fill === 100"
+                  data-test="score-system"
+                >
                   <span class="half" [style.width.%]="fill">&hearts;</span
                   >&hearts;
                 </span>
@@ -116,7 +122,11 @@
             </div>
             <div class="col text-center">
               <h4 class="subtitle">Popularity</h4>
-              <button type="button" class="btn btn-info no-pointer ignore-snapshot" data-test="popularity-system">
+              <button
+                type="button"
+                class="btn btn-info no-pointer ignore-snapshot"
+                data-test="popularity-system"
+              >
                 {{ movie.popularity }}
               </button>
             </div>

@@ -6,11 +6,11 @@ const date = new Date();
 const year = date.getFullYear();
 const month = date.getMonth();
 const day = date.getDate();
-const currentDate = `${year}-${month + 1}-${day}`;
+const currentDate = `${year}-0${month + 1}-${day}`;
 const previousDate = newDate();
 function newDate() {
   if (day > 28) {
-    return `${year}-${month}-28`;
+    return `${year}-0${month}-28`;
   } else if (month === 0) {
     return `${year - 1}-12-${day}`;
   } else {

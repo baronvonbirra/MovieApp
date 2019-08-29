@@ -1,7 +1,7 @@
 <div class="animated fadeIn">
   <h1 class="text-capitalize title col-sm main-container">In theaters now</h1>
   <div *ngIf="theaterMovies.length > 0" class="container">
-    <div class="card-columns justify-content-center">
+    <div class="card-columns justify-content-center" data-test="movies-container">
       <div
         *ngFor="let movie of theaterMovies"
         class="card pointer"
@@ -29,5 +29,6 @@
     [rotate]="true"
     [collectionSize]="totalItems"
     [boundaryLinks]="true"
+    data-test="pagination-container"
   ></ngb-pagination>
 </div>
