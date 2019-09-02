@@ -29,6 +29,6 @@ addMatchImageSnapshotCommand({
   failureThreshold: 0.03,
   failureThresholdType: 'percent',
   customSnapshotsDir: 'cypress/snapshots/results',
-  capture: 'fullPage',
+  capture: 'viewport',
   blackout: ['.ignore-snapshot']
 });

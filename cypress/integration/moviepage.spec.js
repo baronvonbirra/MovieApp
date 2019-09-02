@@ -4,9 +4,6 @@ describe('Movie Page works', function() {
       .get('.carousel-item.active')
       .click();
   });
-  it('displays properly', function() {
-    cy.wait(1000).matchImageSnapshot('movie-page');
-  });
   it('shows all elements', function() {
     cy.get('.img-thumbnail').should('exist');
     cy.get('.movie-title').should('exist');

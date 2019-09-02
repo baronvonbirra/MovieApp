@@ -3,6 +3,7 @@ describe('Home Page works', function() {
     cy.visit('http://localhost:4200');
   });
   it('displays properly', function() {
+    cy.viewport(1280, 720);
     cy.wait(1000).matchImageSnapshot('home-page');
   });
   it('loads a carousel', function() {

@@ -5,6 +5,7 @@ describe('In Theaters Page works', function() {
       .click();
   });
   it('displays properly', function() {
+    cy.viewport(1280, 720);
     cy.wait(1000).matchImageSnapshot('theater-page');
   });
   it('loads movies', function() {

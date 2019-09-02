@@ -16,6 +16,7 @@ describe('Search Page works', function() {
       .should('exist');
   });
   it('displays properly', function() {
+    cy.viewport(1280, 720);
     cy.wait(1000).matchImageSnapshot('search-page');
   });
   it('links to movie page when clicking on a movie', function() {
@@ -26,5 +27,9 @@ describe('Search Page works', function() {
     cy.location().should(loc => {
       expect(loc.pathname).to.include('/movie/');
     });
+  });
+  it('movie page displays properly', function() {
+    cy.viewport(1280, 720);
+    cy.wait(1000).matchImageSnapshot('movie-page');
   });
 });

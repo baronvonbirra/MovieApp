@@ -22,7 +22,8 @@ describe('Recommendations Page works', function() {
       .click();
     cy.get(`[data-test="movies-container"]`).should('exist');
   });
-  it('displays properly', function() {
+  it('recommendations page displays properly', function() {
+    cy.viewport(1280, 720);
     cy.wait(1000).matchImageSnapshot('recommendations-page');
   });
   it('links to movie page when clicking on a movie', function() {

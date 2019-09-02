@@ -1,5 +1,5 @@
 <div class="full-body main-container">
-  <h1 class="text-capitalize movie-title col-sm ignore-snapshot">
+  <h1 class="text-capitalize movie-title col-sm">
     {{ movie.original_title }}
   </h1>
   <div class="container animated fadeIn">
@@ -7,7 +7,7 @@
       <div class="col-md-4">
         <img
           [src]="movie | imagePipe"
-          class="img-thumbnail rounded mx-auto d-block ignore-snapshot"
+          class="img-thumbnail rounded mx-auto d-block"
         />
       </div>
       <div class="col-md-8">
@@ -49,7 +49,7 @@
         <br />
         <div class="container">
           <div class="row">
-            <div class="col genres ignore-snapshot">
+            <div class="col genres">
               <button
                 *ngFor="let genre of movie.genres"
                 type="button"
@@ -59,14 +59,14 @@
               </button>
             </div>
             <div class="col">
-              <p class="runtime overview ignore-snapshot">
+              <p class="runtime overview">
                 {{ movie.runtime }} minutes
               </p>
             </div>
           </div>
         </div>
         <br />
-        <div class="container ignore-snapshot">
+        <div class="container">
           <div class="row">
             <h6 class="overview">{{ movie.overview }}</h6>
           </div>
@@ -83,19 +83,19 @@
               <h4 class="subtitle">Info</h4>
               <div class="row">
                 <div class="col">Release date:</div>
-                <div class="col ignore-snapshot">
+                <div class="col">
                   {{ movie?.release_date | date: 'd-MM-yyyy' }}
                 </div>
               </div>
               <div class="row">
                 <div class="col">Budget:</div>
-                <div class="col ignore-snapshot">
+                <div class="col">
                   {{ movie?.budget | currency: 'USD':'symbol':'4.0-0' }}
                 </div>
               </div>
               <div class="row">
                 <div class="col">Revenue:</div>
-                <div class="col ignore-snapshot">
+                <div class="col">
                   {{ movie?.revenue | currency: 'USD':'symbol':'4.0-0' }}
                 </div>
               </div>
@@ -104,7 +104,7 @@
               <h4 class="subtitle">Score</h4>
               <ng-template #t let-fill="fill">
                 <span
-                  class="star ignore-snapshot"
+                  class="star"
                   [class.full]="fill === 100"
                   data-test="score-system"
                 >
@@ -124,7 +124,7 @@
               <h4 class="subtitle">Popularity</h4>
               <button
                 type="button"
-                class="btn btn-info no-pointer ignore-snapshot"
+                class="btn btn-info no-pointer"
                 data-test="popularity-system"
               >
                 {{ movie.popularity }}
