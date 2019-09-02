@@ -4,8 +4,27 @@ import { map } from 'rxjs/operators';
 
 const date = new Date();
 const year = date.getFullYear();
-const month = date.getMonth();
-const day = date.getDate();
+const month = getMonth(date);
+function getMonth(thisDate) {
+  const myMonth = thisDate.getMonth() + 1;
+  return myMonth < 10 ? '0' + myMonth : '' + myMonth;
+}
+const day = getDay(date);
+function getDay(thisDate) {
+  const myDay = thisDate.getDay() + 1;
+  return myDay < 10 ? '0' + myDay : '' + myDay;
+}
+const currentDate = `${year}-${month}-${day}`;
+const previousDate = newDate();
+function newDate() {
+  if (day > 28) {
+    return `${year}-${month}-28`;
+  } else if (month === 0) {
+    return `${year - 1}-12-${day}`;
+  } else {
+    return `${year}-0${month - 1}-${day}`;
+  }
+}
 
 @Injectable()
 export class MoviedbService {
@@ -25,8 +44,7 @@ export class MoviedbService {
   gettheaterMovies() {
     const url = `${this.urlMoviedb}discover/movie?api_key=${
       this.token
-    }&language=en-US&sort_by=popularity.desc&page=1&primary_release_date.gte=${year}-${month}-${day}&primary_release_date.lte=${year}-${month +
-      1}-${day}`;
+    }&language=en-US&sort_by=popularity.desc&page=1&primary_release_date.gte=${previousDate}&primary_release_date.lte=${currentDate}`;
 
     return this.http.jsonp(url, 'callback');
   }

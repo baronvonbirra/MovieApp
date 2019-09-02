@@ -39,7 +39,7 @@
             <a
               onclick="history.go(-1)"
               role="button"
-              class="btn btn-default col-m mr-1 pointer align-top"
+              class="btn btn-default col-m mr-1 pointer align-top back"
             >
               <img src="./assets/img/backbutton.png" alt="Back" width="50" />
             </a>
@@ -59,7 +59,9 @@
               </button>
             </div>
             <div class="col">
-              <p class="runtime overview">{{ movie.runtime }} minutes</p>
+              <p class="runtime overview">
+                {{ movie.runtime }} minutes
+              </p>
             </div>
           </div>
         </div>
@@ -101,7 +103,11 @@
             <div class="col text-center">
               <h4 class="subtitle">Score</h4>
               <ng-template #t let-fill="fill">
-                <span class="star" [class.full]="fill === 100">
+                <span
+                  class="star"
+                  [class.full]="fill === 100"
+                  data-test="score-system"
+                >
                   <span class="half" [style.width.%]="fill">&hearts;</span
                   >&hearts;
                 </span>
@@ -116,7 +122,11 @@
             </div>
             <div class="col text-center">
               <h4 class="subtitle">Popularity</h4>
-              <button type="button" class="btn btn-info no-pointer">
+              <button
+                type="button"
+                class="btn btn-info no-pointer"
+                data-test="popularity-system"
+              >
                 {{ movie.popularity }}
               </button>
             </div>
