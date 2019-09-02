@@ -1,6 +1,6 @@
 describe('Search Page works', function() {
   it('successfully loads', function() {
-    cy.visit('http://localhost:4200')
+    cy.visit('/')
       .get(`[data-test="search-menu-link"]`)
       .click();
   });
